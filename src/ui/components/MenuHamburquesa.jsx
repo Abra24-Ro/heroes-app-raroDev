@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 export const MenuHamburquesa = ({ navLinkClass }) => {
+  const { user } = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    logout();
     navigate("/login", { replace: true });
   };
   return (
@@ -49,7 +54,7 @@ export const MenuHamburquesa = ({ navLinkClass }) => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              RaroDev
+              {user?.name}
             </a>
           </li>
           <li className="nav-item">
