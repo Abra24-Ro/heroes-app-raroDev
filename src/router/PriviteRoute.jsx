@@ -12,3 +12,4 @@ export const PriviteRoute = ({ children }) => {
 
   return logged ? children : <Navigate to="/login" />;
 };
+

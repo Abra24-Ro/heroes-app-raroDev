@@ -30,7 +30,7 @@ export const LoginPage = () => {
             Iniciar Sesión
           </h3>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <div className="mb-3">
               <label className="form-label">Nombre</label>
               <input

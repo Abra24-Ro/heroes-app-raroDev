@@ -33,7 +33,7 @@ export const Search = () => {
           <div className="card shadow-sm border-0">
             <div className="card-body">
               <h4 className="card-title mb-3">Búsqueda</h4>
-              <form onSubmit={onSearchSubmit}>
+              <form onSubmit={onSearchSubmit} aria-label="form">
                 <input
                   type="text"
                   placeholder="Escribe el nombre de un héroe..."
